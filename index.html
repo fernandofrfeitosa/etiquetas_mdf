@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerador de Etiquetas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Gerador de Etiquetas - Madeiras Anhanguera</h1>
+  <h2>Desenvolvido por Fernando Feitosa fefeitosa@leroymerlin.com.br</h2>
+  <div class="rotulo">
+    <div>LM</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div>Medidas</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div>Preço</div>
+    <div></div>
+    <div>nº de Etiquetas</div>
+    <div></div>
+  </div>
+
+  <form id="form-etiqueta">
+
+    <select id="lm" required>
+      <option value="" disabled selected>Selecione o Código LM</option>
+    </select>
+  
+    <input type="number" id="comprimento" placeholder="Comprimento (cm)" required />
+    <input type="number" id="largura" placeholder="Largura (cm)" required />
+    <input type="text" id="unidade" placeholder="Área (m²)" readonly />
+  
+    <input type="text" id="preco" placeholder="Preço" required />
+    <input type="number" id="quantidade" placeholder="Qtd" min="1" max="32" value="1" />
+  
+    <label style="font-size: 13px;">
+      <input type="text" id="codigoBarras" readonly placeholder="Caminho do Código de Barras" style="font-size: 12px;" />
+    </label>
+  
+    <label style="font-size: 13px;">
+      <input type="text" id="qrCode" readonly placeholder="Caminho do QR Code" style="font-size: 12px;" />
+    </label>
+  
+    <button type="submit" style=" margin: 16px;">Adicionar Etiqueta</button>
+    <button id="botao-imprimir" style="display: none; margin: 16px;" onclick="window.print()">Imprimir</button>
+    <button id="botao-recarregar" style="display: none; margin: 16px;" onclick="location.reload()">Recomeçar</button>
+  
+  </form>
+  
+
+  <hr/>
+
+  <div class="etiquetas-container" id="etiquetas-container"> </div>
+  <button id="botao-imprimir" style="display: none; margin: 16px;" onclick="window.print()">Imprimir</button>
+
+
+  <script src="etiquetas.js"></script>
+  
+  <script src="dados.js"></script>
+  
+</body>
+<footer>
+  Desenvolvido por Fernando Feitosa  09/05/2025  fefeitosa@leroymerlin.com.br  19 9 9368 3390
+</footer>
+</html>
